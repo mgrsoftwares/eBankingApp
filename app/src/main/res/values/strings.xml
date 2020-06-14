@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">eBanking App</string>
+
+    <string-array name="account_type">
+
+        <item>...</item>
+        <item>Savings and Fixed Deposits</item>
+        <item>Current and Loan</item>
+        <item>Cooperate and Company</item>
+
+    </string-array>
+
+</resources>

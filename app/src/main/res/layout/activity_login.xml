@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    tools:ignore="HardcodedText, Autofill, ContentDescription"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/login_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/bank_logo" />
+
+        <EditText
+            android:id="@+id/email_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="5dp"
+            android:inputType="textEmailAddress"
+            android:hint="  Email Address" />
+
+        <EditText
+            android:id="@+id/password_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="  Password"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="5dp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:onClick="login"
+            android:background="@drawable/login_button_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="Login" />
+
+        <Button
+            android:onClick="createAccount"
+            android:background="@drawable/login_button_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="Create Account" />
+
+        <TextView
+            android:id="@+id/resetPasswordTxt"
+            android:onClick="resetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:text="Reset password ..."
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textAlignment="textEnd"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/reset_password_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:onClick="closeResetPassword"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_close" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/bank_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESET PASSWORD"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_margin="10dp"/>
+
+
+        <EditText
+            android:id="@+id/reset_email_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="5dp"
+            android:inputType="textEmailAddress"
+            android:hint="  Email Address" />
+
+        <Button
+            android:id="@+id/reset_email_btn"
+            android:onClick="resetPassword"
+            android:background="@drawable/login_button_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="reset password" />
+
+    </LinearLayout>
+
+</RelativeLayout>

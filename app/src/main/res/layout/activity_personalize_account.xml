@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText, Autofill, ContentDescription, LabelFor"
+    tools:context=".PersonalizeAccountActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/personalize_account_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_weight="4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make Payments"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/home_bottom"
+                android:onClick="backToMainActivity"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_home" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/topView"
+        android:layout_below="@+id/personalize_account_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/personalize_account_photo"
+            android:onClick="selectProfilePicture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:civ_border_width="0.5dp"
+            android:src="@drawable/ic_person"/>
+
+        <TextView
+            android:onClick="selectProfilePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="select new picture"
+            android:background="@drawable/login_button_background"
+            android:padding="5dp"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/personalize_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_person"
+                android:inputType="textPersonName"
+                android:hint="  First name"/>
+
+            <EditText
+                android:id="@+id/personalize_sur_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_person"
+                android:inputType="textPersonName"
+                android:hint="  Sur Name" />
+
+            <EditText
+                android:id="@+id/personalize_middle_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_person"
+                android:inputType="textPersonName"
+                android:hint="  Middle Name (optional)" />
+
+            <EditText
+                android:id="@+id/personalize_date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_date"
+                android:inputType="date"
+                android:hint="  Date of Birth" />
+
+            <EditText
+                android:id="@+id/personalize_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_phone"
+                android:inputType="phone"
+                android:hint="  Phone Number"/>
+
+            <TextView
+                android:id="@+id/personalize_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_email" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_button_background"
+                android:onClick="saveEditedUserInfo"
+                android:padding="10dp"
+                android:text="Save New Account Info"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
